@@ -1,0 +1,41 @@
+Adventure will be a text-based command-line game (to begin with). The game will
+feature:
+
+  (1) a character, the adventurer
+  (2) interesting quests of increasing difficulty
+  (3) randomly-generated worlds
+  (4) randomly-generated monsters
+  (5) movement, fighting, etc.
+
+The game will use OOP, so that the player, the world, weapons, the monsters,
+etc., will all be randomly-generated.
+
+I want the game designed so that it is playable with minimum features, but
+is completely extensible (expandable without rewriting), so that the game
+gets increasingly interesting as new parameters are added such as new
+monsters, new landscape types, towns, types of shops, NPCs, weather, etc.
+
+Game play will involve the user typing commands, an interpreter accepting them
+and adjusting parameters (such as where the player is and what his HP is).
+
+A typical session would involve the character being given some description of
+surroundings, such as "You are in a dense forest, with a path leading onward."
+The environment might have further properties that can be revealed by various
+commands such as x for examine. This might reveal various objects, such as
+trees, squirrels, and insects. The interpreter might permit climbing a tree,
+chopping it down (if you have an axe), etc. Perhaps we'll say that each area
+is of x by y dimensions (e.g., 100m square), and has some sort of ID when the
+world is generated.
+
+To begin I propose to make a 3 x 3 grid, a room, that the player can move
+around, with objects to manipulate, etc.
+
+Of course, the program could become extremely complex if realistic time and
+space is used. It is much simpler (and doesn't require me to learn new
+technologies, perhaps) if I have set ways to move (e.g., "you can move n, e,
+and to living room from here") and ignore all time constraints. This would
+also make it quite a bit easier to have a reasonable algorithm for generating
+maps/worlds. I can also have places within places, e.g., five different way-
+points on a forest trail.
+
+Anyway, this means that the Place class can generate descriptions.

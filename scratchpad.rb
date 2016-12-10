@@ -1,0 +1,1 @@
+puts "Zaphod" * 3
