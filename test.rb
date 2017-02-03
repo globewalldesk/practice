@@ -1,0 +1,1 @@
+puts system("cls").inspect
